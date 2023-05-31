@@ -9,7 +9,7 @@ export default function Vod() {
             <div className={styles.videoContainer}>
                 <iframe
                     className={styles.vod}
-                    src="https://drive.google.com/file/d/18lWDBocj3GkemlwJKl_fqss7yybsxpJD/preview"
+                    src="https://drive.google.com/uc?id=18lWDBocj3GkemlwJKl_fqss7yybsxpJD"
                     allow="autoplay"
                     title="Rubius VOD"
                 />

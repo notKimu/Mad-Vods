@@ -28,7 +28,7 @@
 }
 
 .filler {
-    height: 8rem;
+    height: 7rem;
     opacity: 0;
 }
 
@@ -41,4 +41,13 @@
 
 .option:hover {
     color: var(--accent-color);
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 570px) {
+    .options {
+        display: none;
+    }
 }

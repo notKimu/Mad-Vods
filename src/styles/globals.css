@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+
+/* Global Styles */
+:root {
+    --accent-color: #eba01e;
+    --darkbg: #110624;
+    --main-font: 'Dela Gothic One', Impact,'sans-serif';
+    --secundary-font: 'Comfortaa', Courier;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: azure;
+    font-family: var(--secundary-font);
+    transition: .2s;
+}
+
+html,
+body {
+    background-color: var(--darkbg);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-family: var(--main-font);
+    letter-spacing: 1px;
+}

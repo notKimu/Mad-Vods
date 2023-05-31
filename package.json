@@ -1,6 +1,7 @@
 {
   "name": "kimuverlay",
   "version": "0.1.0",
+  "homepage": "https://notkimu.github.io/Mad-Vods/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -24,10 +25,12 @@
     "zlib": "^1.0.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

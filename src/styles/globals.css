@@ -50,10 +50,12 @@ a {
 
 /* RESPONSIVE */
 @media screen and (max-width: 700px) {
+
     html,
     body {
         background-position: -50%;
     }
+
     .container {
         padding: .7rem;
     }

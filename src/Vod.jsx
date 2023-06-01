@@ -27,7 +27,7 @@ export default function Vod() {
                     allow="autoplay"
                     allowFullScreen="true"
                     title="Rubius VOD"
-                    
+
                 />
                 <div className={styles.vodInfo}>
                     <h1>{vodToPlay.title}</h1>

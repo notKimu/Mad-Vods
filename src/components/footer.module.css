@@ -1,0 +1,7 @@
+.footer {
+    margin-top: 4rem;
+
+    background: rgb(29, 29, 29);
+    background: linear-gradient(0deg, rgba(29, 29, 29, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 1rem;
+}

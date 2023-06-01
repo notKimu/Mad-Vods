@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import styles from "./styles/about.module.css";
 
 export default function About() {
@@ -30,5 +31,7 @@ export default function About() {
                 </div>
             </div>
         </div>
+
+        <Footer />
     </>)
 }

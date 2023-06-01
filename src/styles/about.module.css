@@ -48,19 +48,23 @@
 
 /* RESPONSIVE */
 @media screen and (max-width: 700px) {
+    .aboutContainer {
+        width: 100%;
+    }
+
     .aboutContainer h1 {
         font-size: 2rem;
     }
+
     .aboutContainer p {
         font-size: 1.1rem;
-    }
-    .aboutContainer {
-        width: 90%;
     }
 
     .textMaintainer {
         gap: .1rem;
-    } .textMaintainer p {
+    }
+
+    .textMaintainer p {
         font-size: 1rem;
     }
 }

@@ -12,7 +12,8 @@ export default function About() {
                 <p>
                     Mad Vods fue creado ya que las discográficas no tienen nada
                     más divertido que hacer por las tardes que tumbar los directos
-                    resubidos de Rubius porque hay 0.3 segundos de alguna canción.
+                    resubidos de Rubius (y cualquier otra persona realmente) porque
+                    hay 0.3 segundos de alguna canción.
                     <br /><br />
                     Mad Vods te permite ver los directos tumbados por copyright sin
                     necesitar saber hackear la NASA.

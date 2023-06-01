@@ -23,9 +23,11 @@ export default function Header() {
 
                 <div className={styles.options}>
                     <Link to={`/vod?id=${lastVod[0].id}`} className={styles.option}>
-                        <p className={styles.option}>Último directo</p>
+                        <p>Último directo</p>
                     </Link>
-                    <a className={styles.option}>About</a>
+                    <Link to={"/about"} className={styles.option}>
+                        <p>About</p>
+                    </Link>
                 </div>
             </header>
             <div className={styles.filler} />

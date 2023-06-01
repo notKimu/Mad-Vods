@@ -6,7 +6,7 @@
 :root {
     --accent-color: #bf3e81;
     --darkbg: #11222c;
-    --main-font: 'Dela Gothic One', Impact,'sans-serif';
+    --main-font: 'Dela Gothic One', Impact, 'sans-serif';
     --secundary-font: 'Comfortaa', Courier;
 }
 
@@ -32,6 +32,10 @@ body {
     align-items: center;
     padding: .5rem;
     z-index: 2;
+}
+
+iframe {
+    border: none;
 }
 
 a {

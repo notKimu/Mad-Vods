@@ -6,6 +6,7 @@ import playButton from './files/svg/play.svg'
 import vods from "./files/vods.json";
 
 function MainPage() {
+    // Get the VOD list and last VOD
     const vodList = Object.values(vods);
     const lastVod = vodList.slice(-1);
 
@@ -19,7 +20,7 @@ function MainPage() {
                     <div className={styles.lastVodPlayer}>
                         <iframe
                             className={styles.lastVod}
-                            src={"https://drive.google.com/uc?id=" +lastVod[0].driveId}
+                            src={"https://drive.google.com/uc?id=" + lastVod[0].driveId}
                             allow="autoplay"
                             allowFullScreen="true"
                             title="Last VOD"

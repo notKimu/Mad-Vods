@@ -21,6 +21,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
 } .logo:hover .logoTitle {
     letter-spacing: .1rem;
     font-style: italic;
@@ -42,9 +44,12 @@
     gap: 1rem;
 }
 
-.option:hover {
+.option p {
+    font-weight:600;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+.option:hover p {
     color: var(--accent-color);
-    filter: drop-shadow(0px 0px 14px #00000064);
 }
 
 

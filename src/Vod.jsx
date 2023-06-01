@@ -5,10 +5,12 @@ import styles from "./styles/vod.module.css";
 import vods from "./files/vods.json";
 
 export default function Vod() {
+    // Get what VOD to play
     const [searchParams] = useSearchParams();
     const vodId = searchParams.get('id');
     const vodList = Object.values(vods);
     let vodToPlay = vodList[vodId - 1];
+    // Use the last VOD if no id is provided
     if (!vodId) {
         vodToPlay = vodList.slice(-1)[0];
         console.log(vodToPlay)

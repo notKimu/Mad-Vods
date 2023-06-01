@@ -40,15 +40,40 @@
  gap: 1rem;
 }
 
+.singleVod {
+    position: relative;
+}
+
+
 .vod {
     width: 100%;
     border-radius: .5rem;
 }
 
+.playVod {
+    height: 100%;
+    width: 100%;
 
+    position: absolute;
+    top: 0;
+    left: 0;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    border-radius: .5rem;
+    opacity: 0;
+}
 
+.playButton {
+    height: 50%;
+}
+
+.singleVod:hover .playVod {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 /* RESPONSIVE */
 @media screen and (max-width: 700px) {
     .lastVodInfo {

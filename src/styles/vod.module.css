@@ -6,7 +6,7 @@
     gap: 2rem;
 
     background-color: black;
-    border: 1px solid azure;
+    border: 1px solid var(--accent-color);
     border-radius: 1rem;
     padding: 2rem;
 }

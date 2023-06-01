@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Header from "./components/Header";
 import styles from "./styles/app.module.css";
+import playButton from './files/svg/play.svg'
 // Vod list
 import vods from "./files/vods.json";
 
@@ -36,7 +37,12 @@ function MainPage() {
                         {vodList.reverse().map(vod => {
                             return (
                                 <Link to={`/vod?id=${vod.id}`}>
-                                    <img className={styles.vod} src={vod.thumbnail} />
+                                    <div className={styles.singleVod}>
+                                        <img className={styles.vod} src={vod.thumbnail} />
+                                        <div className={styles.playVod}>
+                                            <img className={styles.playButton} src={playButton} />
+                                        </div>
+                                    </div>
                                 </Link>
                             )
                         })}

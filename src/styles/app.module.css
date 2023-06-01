@@ -45,7 +45,7 @@
     aspect-ratio: 16/9;
     width: 27%;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     border: 1px solid black;
     border-radius: .5rem;
 }
@@ -63,8 +63,8 @@
     top: 0;
     left: 0;
 
-    background: rgb(29,29,29);
-    background: linear-gradient(0deg, rgba(29,29,29,0.7) 0%, rgba(0,0,0,0) 40%); 
+    background: rgb(29, 29, 29);
+    background: linear-gradient(0deg, rgba(29, 29, 29, 0.7) 0%, rgba(0, 0, 0, 0) 40%);
 }
 
 .playVod {
@@ -87,7 +87,9 @@
     position: absolute;
     bottom: 0;
     padding: .5rem;
-} .vodTitleContainer p {
+}
+
+.vodTitleContainer p {
     font-size: 1rem;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -106,17 +108,21 @@
 .singleVod:hover .vodTitleContainer {
     display: none;
 }
+
 /* RESPONSIVE */
 @media screen and (max-width: 700px) {
     .lastVodInfo {
         display: none;
     }
+
     .lastVod {
         width: 100%;
     }
+
     .singleVod {
         width: 45%;
     }
+
     .vodTitleContainer p {
         font-size: 3vw;
     }

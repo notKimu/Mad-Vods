@@ -19,8 +19,9 @@ function MainPage() {
                     <div className={styles.lastVodPlayer}>
                         <iframe
                             className={styles.lastVod}
-                            src={lastVod[0].url}
+                            src={"https://drive.google.com/uc?id=" +lastVod[0].driveId}
                             allow="autoplay"
+                            allowFullScreen="true"
                             title="Last VOD"
                         />
                         <div className={styles.lastVodInfo}>
@@ -36,12 +37,14 @@ function MainPage() {
                     <div className={styles.allVods}>
                         {vodList.reverse().map(vod => {
                             return (
-                                <Link to={`/vod?id=${vod.id}`}>
-                                    <div className={styles.singleVod}>
-                                        <img className={styles.vod} src={vod.thumbnail} />
-                                        <div className={styles.playVod}>
-                                            <img className={styles.playButton} src={playButton} />
-                                        </div>
+                                <Link to={`/vod?id=${vod.id}`} className={styles.singleVod}>
+                                    <img alt="VOD from El RubiusOMG" className={styles.vod} src={vod.thumbnail} />
+                                    <div className={styles.vodGradient}></div>
+                                    <div className={styles.vodTitleContainer}>
+                                        <p>{vod.title}</p>
+                                    </div>
+                                    <div className={styles.playVod}>
+                                        <img alt="Play button" className={styles.playButton} src={playButton} />
                                     </div>
                                 </Link>
                             )

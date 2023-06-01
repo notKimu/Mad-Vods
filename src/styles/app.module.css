@@ -36,18 +36,35 @@
 }
 
 .allVods {
- display: flex;
- gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .singleVod {
+    aspect-ratio: 16/9;
+    width: 27%;
     position: relative;
+    overflow: hidden; 
+    border: 1px solid black;
+    border-radius: .5rem;
 }
-
 
 .vod {
     width: 100%;
-    border-radius: .5rem;
+    height: 100%;
+}
+
+.vodGradient {
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: rgb(29,29,29);
+    background: linear-gradient(0deg, rgba(29,29,29,0.7) 0%, rgba(0,0,0,0) 40%); 
 }
 
 .playVod {
@@ -62,17 +79,32 @@
     align-items: center;
     justify-content: center;
 
-    border-radius: .5rem;
     opacity: 0;
 }
 
+.vodTitleContainer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: .5rem;
+} .vodTitleContainer p {
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .playButton {
-    height: 50%;
+    height: 30%;
 }
 
 .singleVod:hover .playVod {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+.singleVod:hover .vodTitleContainer {
+    display: none;
 }
 /* RESPONSIVE */
 @media screen and (max-width: 700px) {
@@ -81,5 +113,11 @@
     }
     .lastVod {
         width: 100%;
+    }
+    .singleVod {
+        width: 45%;
+    }
+    .vodTitleContainer p {
+        font-size: 3vw;
     }
 }

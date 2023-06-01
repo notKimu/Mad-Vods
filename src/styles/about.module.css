@@ -41,6 +41,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    overflow: scroll;
 }
 
 
@@ -55,5 +56,11 @@
     }
     .aboutContainer {
         width: 90%;
+    }
+
+    .textMaintainer {
+        gap: .1rem;
+    } .textMaintainer p {
+        font-size: 1rem;
     }
 }

@@ -111,20 +111,22 @@
     display: none;
 }
 
+
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 700px) {
-    .lastVodInfo {
-        display: none;
-    }
-
+    .lastVodContainer,
+    .allVodsContainer,
     .lastVod {
         width: 100%;
     }
-
+    .lastVodInfo {
+        display: none;
+    }
     .singleVod {
         width: 45%;
     }
-
     .vodTitleContainer p {
         font-size: 3vw;
     }

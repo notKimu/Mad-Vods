@@ -23,11 +23,10 @@ export default function Vod() {
             <div className={styles.videoContainer}>
                 <iframe
                     className={styles.vod}
-                    src={"https://drive.google.com/uc?id=" + vodToPlay.driveId}
+                    src={`https://drive.google.com/file/d/${vodToPlay.driveId}/preview`}
                     allow="autoplay"
                     allowFullScreen="true"
                     title="Rubius VOD"
-
                 />
                 <div className={styles.vodInfo}>
                     <h1>{vodToPlay.title}</h1>

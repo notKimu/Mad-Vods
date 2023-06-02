@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import styles from "./styles/about.module.css";
+// My image owo
+import kimu from './files/img/kimu.webp';
 
 export default function About() {
     return (<>
@@ -24,7 +26,7 @@ export default function About() {
                     el código en <a href="https://github.com/notKimu/Mad-Vods">Github</a>.
                 </p>
                 <div className={styles.aboutMaintainer}>
-                    <img className={styles.pfp} src="https://cdn.discordapp.com/avatars/504655450655162379/8bde9cc33074d774951f4ed8062cfdac.webp?size=2048" />
+                    <img className={styles.pfp} src={kimu} />
                     <div className={styles.textMaintainer}>
                         <h1>Kimu</h1>
                         <p>Programadora de la página web y maintainer del almacenamiento.</p>

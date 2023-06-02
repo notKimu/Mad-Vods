@@ -1,5 +1,5 @@
 .videoContainer {
-    width: fit-content;
+    width: 100%;
 
     display: flex;
     justify-content: center;

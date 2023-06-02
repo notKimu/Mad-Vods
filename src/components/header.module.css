@@ -39,11 +39,6 @@
     font-style: italic;
 }
 
-.filler {
-    height: 7rem;
-    opacity: 0;
-}
-
 .options {
     height: 100%;
     display: flex;
@@ -114,6 +109,10 @@
     transform: translateX(0%);
 }
 
+.filler {
+    height: 5.5rem;
+    opacity: 0;
+}
 
 
 

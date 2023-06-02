@@ -19,15 +19,13 @@ function MainPage() {
                 <div className={styles.lastVodContainer}>
                     <h1>Último VOD</h1>
                     <div className={styles.lastVodPlayer}>
-                        <a href={`https://drive.google.com/file/d/${lastVod[0].driveId}/preview`}>
-                            <iframe
-                                className={styles.lastVod}
-                                src={`https://drive.google.com/file/d/${lastVod[0].driveId}/preview`}
-                                allow="autoplay"
-                                allowFullScreen="true"
-                                title="Last VOD"
-                            />
-                        </a>
+                        <iframe
+                            className={styles.lastVod}
+                            src={`https://drive.google.com/file/d/${lastVod[0].driveId}/preview`}
+                            allow="autoplay"
+                            allowFullScreen="true"
+                            title="Last VOD"
+                        />
                         <div className={styles.lastVodInfo}>
                             <h2>{lastVod[0].title}</h2>
                             <p>{lastVod[0].description}</p>

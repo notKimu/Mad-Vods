@@ -1,4 +1,4 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Header from "./components/Header";
 import styles from "./styles/vod.module.css";
 import thumbnail from "./utils/thumbnail";

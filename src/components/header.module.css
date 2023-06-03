@@ -123,6 +123,9 @@
     .header {
         background-size: 200%;
     }
+    .filler {
+        height: 6.5rem;
+    }
 }
 
 @media screen and (max-width: 570px) {

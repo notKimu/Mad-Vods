@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import styles from "./styles/about.module.css";
 // My image owo
 import kimu from './files/img/kimu.webp';

@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import thumbnail from "./utils/thumbnail";
 import styles from "./styles/app.module.css";
 // Vod list

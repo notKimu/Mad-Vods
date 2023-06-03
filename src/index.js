@@ -5,6 +5,7 @@ import './styles/globals.css'
 import MainPage from "./App";
 import Vod from "./Vod";
 import About from "./About";
+import NotFound from "./NotFound";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -14,6 +15,7 @@ root.render(
       <Route path="/" element={<MainPage />} />
       <Route path="/vod" element={<Vod />} />
       <Route path="/about" element={<About />} />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
 );

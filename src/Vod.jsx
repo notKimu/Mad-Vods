@@ -23,9 +23,9 @@ export default function Vod() {
 
         <div className="container">
             {vodToPlay === undefined ?
-                <div className={styles.notFound}>
+                <div className="notFound">
                     <img src={animeQuestion} />
-                    <div className={styles.notFoundText}>
+                    <div className="notFoundText">
                         <h1>No existe ese VOD</h1>
                         <Link to={`/vod?id=${--vodList.length}`}><h2>Mira el último directo</h2></Link>
                     </div>

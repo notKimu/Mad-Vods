@@ -48,31 +48,6 @@
     width: 100%;
 }
 
-/* NOT FOUND */
-.notFound {
-    width: 70%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    padding: 1rem;
-}
-
-.notFound img {
-    width: 20%;
-}
-
-.notFoundText {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.notFoundText h2 {
-    text-decoration: underline;
-}
 
 
 /* Responsive */

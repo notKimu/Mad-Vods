@@ -92,4 +92,14 @@ a {
     .container {
         padding: .7rem;
     }
+
+    .notFound {
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .notFound img {
+        width: 50%;
+    }
 }

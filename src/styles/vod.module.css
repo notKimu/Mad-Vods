@@ -56,10 +56,4 @@
         flex-direction: column;
         padding: 1rem;
     }
-    .notFound {
-        width: 100%;
-        flex-direction: column;
-    } .notFound img {
-        width: 60%;
-    }
 }

@@ -1,23 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import thumbnail from "./utils/thumbnail";
 import styles from "./styles/app.module.css";
 // Vod list
 import vods from "./files/vods.json";
 
+let thumbnailWidth = "calc(33.33% - 0.66rem)";
 function MainPage() {
     // Get the VOD list and last VOD
     const vodList = Object.values(vods);
     const lastVod = vodList.slice(-1);
+
     // Pages for all the VODS
-    const PAGE_SIZE = 9;
     const [currentPage, setCurrentPage] = useState(1);
-    const startIndex = (currentPage - 1) * PAGE_SIZE;
-    const endIndex = startIndex + PAGE_SIZE;
+    const [maxPageSize, setMaxPageSize] = useState(getInitialmaxPageSize());
+    const startIndex = (currentPage - 1) * maxPageSize;
+    const endIndex = startIndex + maxPageSize;
     const paginatedVodList = vodList.slice().reverse().slice(startIndex, endIndex);
-  
+
+    function getInitialmaxPageSize() {
+        if (window.innerWidth < 700) {
+            thumbnailWidth = "calc(50% - 0.66rem)";
+            return 8
+        } else {
+            thumbnailWidth = "calc(33.33% - 0.66rem)";
+            return 9;
+        }
+    }
+
+    useEffect(() => {
+        function handleResize() {
+            setMaxPageSize(getInitialmaxPageSize());
+        }
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const loadMore = () => {
-      setCurrentPage(currentPage + 1);
+        setCurrentPage(currentPage + 1);
     };
     const prevPage = () => {
         setCurrentPage(currentPage - 1);
@@ -25,7 +46,11 @@ function MainPage() {
     const generateImageId = (index) => {
         const imageIndex = startIndex + index;
         return vodList.length - imageIndex;
-      };
+    };
+
+    useEffect(() => {
+        console.log(window.innerWidth);
+    }, [window.innerWidth])
 
 
     return (
@@ -61,7 +86,7 @@ function MainPage() {
                             vod.isYoutube === 1
                                 ? (genThumbnail = `https://img.youtube.com/vi/${vod.videoId}/mqdefault.jpg`)
                                 : (genThumbnail = vod.thumbnail);
-                            return thumbnail(vod.title, genThumbnail, generateImageId(index));
+                            return thumbnail(vod.title, genThumbnail, generateImageId(index), thumbnailWidth);
                         })}
                     </div>
 

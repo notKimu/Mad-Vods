@@ -109,6 +109,10 @@
         width: 100%;
     }
 
+    .allVodsContainer h1 {
+        font-size: x-large;
+    }
+
     .lastVodInfo {
         display: none;
     }

@@ -10,7 +10,7 @@
     background-color: rgb(0, 0, 0);
     background-image: url('../files/img/rubBanner.png');
     background-size: cover;
-    border-bottom: 2px solid #45c0d1;
+    border-bottom: 2px solid var(--secondary-color);
     box-shadow: 0 8px 32px 0 #45c0d124;
     padding: 1rem;
     z-index: 99999999999;

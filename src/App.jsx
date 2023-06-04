@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import thumbnail from "./utils/thumbnail";
 import styles from "./styles/app.module.css";
@@ -8,6 +9,24 @@ function MainPage() {
     // Get the VOD list and last VOD
     const vodList = Object.values(vods);
     const lastVod = vodList.slice(-1);
+    // Pages for all the VODS
+    const PAGE_SIZE = 9;
+    const [currentPage, setCurrentPage] = useState(1);
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    const endIndex = startIndex + PAGE_SIZE;
+    const paginatedVodList = vodList.slice().reverse().slice(startIndex, endIndex);
+  
+    const loadMore = () => {
+      setCurrentPage(currentPage + 1);
+    };
+    const prevPage = () => {
+        setCurrentPage(currentPage - 1);
+    };
+    const generateImageId = (index) => {
+        const imageIndex = startIndex + index;
+        return vodList.length - imageIndex;
+      };
+
 
     return (
         <>
@@ -19,8 +38,10 @@ function MainPage() {
                     <div className={styles.lastVodPlayer}>
                         <iframe
                             className={styles.lastVod}
-                            src={`https://drive.google.com/file/d/${lastVod[0].driveId}/preview`}
-                            allow="autoplay"
+                            src={lastVod[0].isYoutube === 0 ?
+                                `https://drive.google.com/file/d/${lastVod[0].videoId}/preview`
+                                : "https://www.youtube.com/embed/" + lastVod[0].videoId}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen="true"
                             title="Last VOD"
                         />
@@ -33,11 +54,25 @@ function MainPage() {
 
 
                 <div className={styles.allVodsContainer}>
-                    <h1>Todos los VODS</h1>
+                    <h1>Todos los VODS - {--vodList.length}</h1>
                     <div className={styles.allVods}>
-                        {vodList.reverse().map(vod => {
-                            return (thumbnail(vod.title, vod.thumbnail, vod.id));
+                        {paginatedVodList.map((vod, index) => {
+                            let genThumbnail = "";
+                            vod.isYoutube === 1
+                                ? (genThumbnail = `https://img.youtube.com/vi/${vod.videoId}/mqdefault.jpg`)
+                                : (genThumbnail = vod.thumbnail);
+                            return thumbnail(vod.title, genThumbnail, generateImageId(index));
                         })}
+                    </div>
+
+                    <div className={styles.buttons}>
+                        {currentPage !== 1 && (
+                            <button onClick={prevPage}>Anterior</button>
+                        )}
+                        <div className={styles.buttonsFiller} />
+                        {vodList.length > endIndex && (
+                            <button onClick={loadMore}>Siguiente</button>
+                        )}
                     </div>
                 </div>
             </div>

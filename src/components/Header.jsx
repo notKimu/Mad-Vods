@@ -14,7 +14,6 @@ export default function Header() {
 
     // Get the latest VOD to send the user to it
     const vodList = Object.values(vods);
-    const lastVod = vodList.slice(-1);
 
 
     return (
@@ -31,7 +30,7 @@ export default function Header() {
                 </a>
 
                 <div className={styles.options}>
-                    <Link to={`/vod?id=${lastVod[0].id}`} className={styles.option}>
+                    <Link to={`/vod?id=${--vodList.length}`} className={styles.option}>
                         <p>Último directo</p>
                     </Link>
                     <Link to={"/about"} className={styles.option}>
@@ -57,7 +56,7 @@ export default function Header() {
             {navOpen && <div className={styles.overlay} onClick={() => setNavOpen(false)} />}
             <div className={`${styles.nav} ${navOpen ? "" : styles.hidden}`}>
                 <div className={styles.navOptions}>
-                    <Link to={`/vod?id=${lastVod[0].id}`} className={styles.option}>
+                    <Link to={`/vod?id=${--vodList.length}`} className={styles.option}>
                         <p>Último directo</p>
                     </Link>
                     <Link to={"/about"} className={styles.option}>

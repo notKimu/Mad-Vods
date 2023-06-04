@@ -13,9 +13,9 @@ export default function Vod() {
     vodId = searchParams.get('id');
     vodList = Object.values(vods);
     vodToPlay = vodList[vodId];
-    if (vodId === null) {
+    if (vodId === null || vodId === "undefined") {
         vodToPlay = vodList.slice(-1)[0];
-        vodId = vodToPlay.id;
+        vodId = --vodList.length;
     }
 
     return (<>
@@ -35,14 +35,16 @@ export default function Vod() {
                     <div className={styles.videoContainer}>
                         <iframe
                             className={styles.vod}
-                            src={`https://drive.google.com/file/d/${vodToPlay.driveId}/preview`}
-                            allow="autoplay"
+                            src={vodToPlay.isYoutube === 0 ?
+                                `https://drive.google.com/file/d/${vodToPlay.videoId}/preview`
+                                : "https://www.youtube.com/embed/" + vodToPlay.videoId}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen="true"
-                            title="Rubius VOD"
+                            title={vodToPlay.title}
                         />
                         <div className={styles.vodInfo}>
                             <h1>{vodToPlay.title}</h1>
-                            <span>{vodToPlay.description}</span>
+                            <p>{vodToPlay.description}</p>
                         </div>
                     </div>
 
@@ -50,13 +52,21 @@ export default function Vod() {
                         {vodList[+vodId - 1] ?
                             <div className={styles.selectVod}>
                                 <h2>VOD anterior</h2>
-                                {thumbnail(vodList[+vodId - 1].title, vodList[+vodId - 1].thumbnail, vodList[+vodId - 1].id)}
+                                {
+                                    vodList[+vodId - 1].isYoutube === 1 ?
+                                        thumbnail(vodList[+vodId - 1].title, `https://img.youtube.com/vi/${vodList[+vodId - 1].videoId}/mqdefault.jpg`, +vodId - 1)
+                                        : thumbnail(vodList[+vodId - 1].title, vodList[+vodId - 1].thumbnail, +vodId - 1)
+                                }
                             </div>
                             : ""}
                         {vodList[+vodId + 1] ?
                             <div className={styles.selectVod}>
                                 <h2>Siguiente VOD</h2>
-                                {thumbnail(vodList[+vodId + 1].title, vodList[+vodId + 1].thumbnail, vodList[+vodId + 1].id)}
+                                {
+                                    vodList[+vodId + 1].isYoutube === 1 ?
+                                        thumbnail(vodList[+vodId + 1].title, `https://img.youtube.com/vi/${vodList[+vodId + 1].videoId}/mqdefault.jpg`, +vodId + 1)
+                                        : thumbnail(vodList[+vodId + 1].title, vodList[+vodId + 1].thumbnail, +vodId + 1)
+                                }
                             </div>
                             : ""}
                     </div>

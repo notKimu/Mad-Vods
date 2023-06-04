@@ -1,7 +1,9 @@
 import Header from "./components/Header";
 import styles from "./styles/about.module.css";
-// My image owo
-import kimu from './files/img/kimu.webp';
+import maintainer from "./utils/maintainer";
+// Images owo
+import kimu from "./files/img/kimu.png";
+import naneko from "./files/img/naneko.png";
 
 export default function About() {
     return (<>
@@ -24,13 +26,11 @@ export default function About() {
                     desde aquí, obviamente sin tener que pagar nada ni ver anuncios, puedes ver
                     el código en <a href="https://github.com/notKimu/Mad-Vods">Github</a>.
                 </p>
-                <div className={styles.aboutMaintainer}>
-                    <img className={styles.pfp} src={kimu} />
-                    <div className={styles.textMaintainer}>
-                        <h1>Kimu</h1>
-                        <p>Programadora de la página web y maintainer del almacenamiento.</p>
-                    </div>
-                </div>
+
+                {maintainer("Kimu", "Programadora de la página web y maintainer del almacenamiento.", kimu, "var(--accent-color)")}
+                {maintainer("Naneko", "Responsable de la subida de los vídeos y el canal de YouTube.", naneko, "#45c0d1")}
+
+
             </div>
         </div>
     </>)

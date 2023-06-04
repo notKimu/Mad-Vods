@@ -39,6 +39,10 @@
     word-wrap: break-word;
 }
 
+.lastVodInfo h2 {
+    font-size: larger;
+}
+
 .lastVodInfo p {
     white-space: pre-line;
     overflow: scroll;

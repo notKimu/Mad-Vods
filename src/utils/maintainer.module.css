@@ -1,0 +1,45 @@
+.aboutMaintainer {
+    display: flex;
+    gap: 1rem;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.pfp {
+    height: 8rem;
+    border-radius: .5rem;
+}
+
+.textMaintainer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    overflow: scroll;
+}
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 700px) {
+    .aboutContainer h1 {
+        font-size: 2rem;
+    }
+
+    .aboutContainer p {
+        font-size: 1.1rem;
+    }
+
+    .textMaintainer {
+        gap: .1rem;
+    }
+
+    .textMaintainer p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .textMaintainer h1 {
+        font-size: 1.8rem;
+    }
+}

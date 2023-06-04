@@ -13,9 +13,9 @@ export default function Vod() {
     vodId = searchParams.get('id');
     vodList = Object.values(vods);
     vodToPlay = vodList[vodId];
-    if (vodId === null || vodId === "undefined") {
+    if (!parseInt(vodId)) {
         vodToPlay = vodList.slice(-1)[0];
-        vodId = --vodList.length;
+        vodId = vodList.length - 1;
     }
 
     return (<>
@@ -54,8 +54,8 @@ export default function Vod() {
                                 <h2>VOD anterior</h2>
                                 {
                                     vodList[+vodId - 1].isYoutube === 1 ?
-                                        thumbnail(vodList[+vodId - 1].title, `https://img.youtube.com/vi/${vodList[+vodId - 1].videoId}/mqdefault.jpg`, +vodId - 1)
-                                        : thumbnail(vodList[+vodId - 1].title, vodList[+vodId - 1].thumbnail, +vodId - 1)
+                                        thumbnail(vodList[+vodId - 1].title, `https://img.youtube.com/vi/${vodList[+vodId - 1].videoId}/mqdefault.jpg`, +vodId - 1, "100%")
+                                        : thumbnail(vodList[+vodId - 1].title, vodList[+vodId - 1].thumbnail, +vodId - 1, "100%")
                                 }
                             </div>
                             : ""}
@@ -64,8 +64,8 @@ export default function Vod() {
                                 <h2>Siguiente VOD</h2>
                                 {
                                     vodList[+vodId + 1].isYoutube === 1 ?
-                                        thumbnail(vodList[+vodId + 1].title, `https://img.youtube.com/vi/${vodList[+vodId + 1].videoId}/mqdefault.jpg`, +vodId + 1)
-                                        : thumbnail(vodList[+vodId + 1].title, vodList[+vodId + 1].thumbnail, +vodId + 1)
+                                        thumbnail(vodList[+vodId + 1].title, `https://img.youtube.com/vi/${vodList[+vodId + 1].videoId}/mqdefault.jpg`, +vodId + 1, "100%")
+                                        : thumbnail(vodList[+vodId + 1].title, vodList[+vodId + 1].thumbnail, +vodId + 1, "100%")
                                 }
                             </div>
                             : ""}

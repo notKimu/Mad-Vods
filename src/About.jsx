@@ -27,7 +27,7 @@ export default function About() {
                     el código en <a href="https://github.com/notKimu/Mad-Vods">Github</a>.
                 </p>
 
-                {maintainer("Kimu", "Programadora de la página web y maintainer del almacenamiento.", kimu, "var(--accent-color)")}
+                {maintainer("Kimu", "Programadora de la página web y maintainer del almacenamiento.", kimu, "#bf3e81")}
                 {maintainer("Naneko", "Responsable de la subida de los vídeos y el canal de YouTube.", naneko, "#45c0d1")}
 
 

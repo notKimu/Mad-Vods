@@ -26,6 +26,8 @@
     white-space: pre-line;
 } .vodInfo h1 {
     font-size: large;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* EXTRAS */

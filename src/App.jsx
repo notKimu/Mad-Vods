@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import thumbnail from "./utils/thumbnail";
 import styles from "./styles/app.module.css";
+import graffitiArrows from "./files/img/graffitiArrows.png";
 // Vod list
 import vods from "./files/vods.json";
 
@@ -61,6 +62,8 @@ function MainPage() {
 
             <div className="container">
                 <div className={styles.lastVodContainer}>
+                    <img className={styles.graffitiArrows} src={graffitiArrows} />
+
                     <h1>Último VOD</h1>
                     <div className={styles.lastVodPlayer}>
                         {lastVod[0].isYoutube === 0 ? <a className="driveSender" href={`https://drive.google.com/file/d/${lastVod[0].videoId}/preview`} /> : ""}

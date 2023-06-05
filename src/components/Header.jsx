@@ -25,7 +25,7 @@ export default function Header() {
                             alt='MadKat logo'
                             className={styles.logoImage}
                             src='/MadKat.png' />
-                        <h1 className={`${styles.logoTitle} title`}>Mad Vods</h1>
+                        <h1 className={`${styles.logoTitle} title`}>MadVods</h1>
                     </div>
                 </a>
 

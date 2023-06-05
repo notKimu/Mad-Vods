@@ -21,10 +21,10 @@ function MainPage() {
     // Change some values depending on the width
     function getInitialmaxPageSize() {
         if (window.innerWidth < 700) {
-            thumbnailWidth = "calc(50% - 0.66rem)";
+            thumbnailWidth = "calc(50% - .4rem)";
             return 8
         } else {
-            thumbnailWidth = "calc(33.33% - 0.66rem)";
+            thumbnailWidth = "calc(33.33% - .4rem)";
             return 9;
         }
     }

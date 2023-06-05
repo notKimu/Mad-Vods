@@ -31,6 +31,7 @@
 }
 
 .selectVod {
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -51,10 +52,5 @@
     }
     .vodToPlayInfo {
         max-width: 100%;
-    }
-}
-@media screen and (max-width: 400px) {
-    .switchVods {
-        flex-direction: column;
     }
 }

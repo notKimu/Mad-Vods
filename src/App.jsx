@@ -86,7 +86,7 @@ function MainPage() {
                             vod.isYoutube === 1
                                 ? (genThumbnail = `https://img.youtube.com/vi/${vod.videoId}/mqdefault.jpg`)
                                 : (genThumbnail = vod.thumbnail);
-                            return thumbnail(vod.title, genThumbnail, generateImageId(index), thumbnailWidth);
+                            return thumbnail(vod.title, genThumbnail, generateImageId(index), vod.isYoutube, thumbnailWidth);
                         })}
                     </div>
 

@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import playButton from "../files/svg/play.svg";
 import styles from "./thumbnail.module.css";
+import playButton from "../files/svg/play.svg";
+import lock from "../files/svg/lock.svg";
 
-export default function thumbnail(title, thumbnail, id, width) {
+export default function thumbnail(title, thumbnail, id, isYoutube, width) {
     return (
         <Link to={`/vod?id=${id}`} className={styles.singleVod} style={{width: width}}>
+            {isYoutube !== 1 && <img src={lock} className={styles.lock} />}
             <img alt={title} className={styles.vod} src={thumbnail} />
             <div className={styles.vodGradient}></div>
             <div className={styles.vodTitleContainer}>

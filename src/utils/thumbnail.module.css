@@ -7,12 +7,14 @@
     border-radius: .5rem;
 }
 
-.lock {
-    height: 40px;
+.locked {
+    width: 7%;
     position: absolute;
     top: 0;
     right: 0;
-    margin: .2rem;
+    margin: .3rem;
+
+    filter: drop-shadow(0 0 2px azure);
 }
 
 .vod {
@@ -64,7 +66,9 @@
 .playButton {
     height: 30%;
     opacity: .5;
-} .playButton:hover {
+}
+
+.playButton:hover {
     opacity: 1;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.622));
 }
@@ -75,5 +79,9 @@
 }
 
 .singleVod:hover .vodTitleContainer {
+    display: none;
+}
+
+.singleVod:hover .locked {
     display: none;
 }

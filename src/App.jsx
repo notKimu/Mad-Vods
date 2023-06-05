@@ -18,6 +18,7 @@ function MainPage() {
     const endIndex = startIndex + maxPageSize;
     const paginatedVodList = vodList.slice().reverse().slice(startIndex, endIndex);
 
+    // Change some values depending on the width
     function getInitialmaxPageSize() {
         if (window.innerWidth < 700) {
             thumbnailWidth = "calc(50% - 0.66rem)";
@@ -43,6 +44,7 @@ function MainPage() {
     const prevPage = () => {
         setCurrentPage(currentPage - 1);
     };
+    // Set id for each thumbnail
     const generateImageId = (index) => {
         const imageIndex = startIndex + index;
         return vodList.length - imageIndex;
@@ -66,12 +68,12 @@ function MainPage() {
                             src={lastVod[0].isYoutube === 0 ?
                                 `https://drive.google.com/file/d/${lastVod[0].videoId}/preview`
                                 : "https://www.youtube.com/embed/" + lastVod[0].videoId}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allow={lastVod[0].isYoutube === 0 ? "" : "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"}
                             allowFullScreen="true"
                             title="Last VOD"
                         />
-                        <div className={styles.lastVodInfo}>
-                            <h2>{lastVod[0].title}</h2>
+                        <div className="vodInfo">
+                            <h1>{lastVod[0].title}</h1>
                             <p>{lastVod[0].description}</p>
                         </div>
                     </div>
@@ -79,7 +81,7 @@ function MainPage() {
 
 
                 <div className={styles.allVodsContainer}>
-                    <h1>Todos los VODS - {--vodList.length}</h1>
+                    <h1>Todos los VODS - {vodList.length}</h1>
                     <div className={styles.allVods}>
                         {paginatedVodList.map((vod, index) => {
                             let genThumbnail = "";

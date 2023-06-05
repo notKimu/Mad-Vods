@@ -33,16 +33,18 @@ export default function Vod() {
                 :
                 <>
                     <div className={styles.videoContainer}>
+                        {vodToPlay.isYoutube === 0 ? <a className={styles.driveSender} href={`https://drive.google.com/file/d/${vodToPlay.videoId}/preview`} /> : ""}
                         <iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowFullScreen="true"
                             className={styles.vod}
                             src={vodToPlay.isYoutube === 0 ?
                                 `https://drive.google.com/file/d/${vodToPlay.videoId}/preview`
                                 : "https://www.youtube.com/embed/" + vodToPlay.videoId}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen="true"
                             title={vodToPlay.title}
                         />
-                        <div className={styles.vodInfo}>
+                        
+                        <div className="vodInfo">
                             <h1>{vodToPlay.title}</h1>
                             <p>{vodToPlay.description}</p>
                         </div>

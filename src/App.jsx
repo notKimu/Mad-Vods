@@ -63,6 +63,7 @@ function MainPage() {
                 <div className={styles.lastVodContainer}>
                     <h1>Último VOD</h1>
                     <div className={styles.lastVodPlayer}>
+                        {lastVod[0].isYoutube === 0 ? <a className="driveSender" href={`https://drive.google.com/file/d/${lastVod[0].videoId}/preview`} /> : ""}
                         <iframe
                             className="vod"
                             src={lastVod[0].isYoutube === 0 ?

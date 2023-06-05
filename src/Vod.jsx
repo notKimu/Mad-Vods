@@ -18,6 +18,8 @@ export default function Vod() {
         vodId = vodList.length - 1;
     }
 
+    document.title = "MadVods | VOD " + vodId;
+
     return (<>
         <Header />
 
@@ -33,7 +35,7 @@ export default function Vod() {
                 :
                 <>
                     <div className={styles.videoContainer}>
-                        {vodToPlay.isYoutube === 0 ? <a className={styles.driveSender} href={`https://drive.google.com/file/d/${vodToPlay.videoId}/preview`} /> : ""}
+                        {vodToPlay.isYoutube === 0 ? <a className="driveSender" href={`https://drive.google.com/file/d/${vodToPlay.videoId}/preview`} /> : ""}
                         <iframe
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen="true"

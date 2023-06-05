@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import Header from "./components/Header"
 import g4to from "./files/img/g4to.png";
 export default function NotFound() {
+    document.title = "MadVods | Error 404";
+
     return (
         <>
             <Header />

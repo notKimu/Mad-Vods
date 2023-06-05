@@ -12,15 +12,6 @@
     padding: 1.5rem;
 }
 
-.driveSender {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: all;
-    z-index: 9999;
-}
 
 /* EXTRAS */
 .switchVods {
@@ -51,6 +42,7 @@
     .videoContainer {
         flex-direction: column;
     }
+
     .vodToPlayInfo {
         max-width: 100%;
     }

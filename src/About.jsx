@@ -6,6 +6,8 @@ import kimu from "./files/img/kimu.png";
 import naneko from "./files/img/naneko.png";
 
 export default function About() {
+    document.title = "MadVods | About";
+
     return (<>
         <Header />
 

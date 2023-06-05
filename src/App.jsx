@@ -47,7 +47,7 @@ function MainPage() {
     // Set id for each thumbnail
     const generateImageId = (index) => {
         const imageIndex = startIndex + index;
-        return vodList.length - imageIndex;
+        return vodList.length - imageIndex - 1;
     };
 
     useEffect(() => {

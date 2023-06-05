@@ -37,14 +37,14 @@ export default function Vod() {
                         <iframe
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen="true"
-                            className={styles.vod}
+                            className="vod"
                             src={vodToPlay.isYoutube === 0 ?
                                 `https://drive.google.com/file/d/${vodToPlay.videoId}/preview`
                                 : "https://www.youtube.com/embed/" + vodToPlay.videoId}
                             title={vodToPlay.title}
                         />
                         
-                        <div className="vodInfo">
+                        <div className={`${styles.vodToPlayInfo} vodInfo`}>
                             <h1>{vodToPlay.title}</h1>
                             <p>{vodToPlay.description}</p>
                         </div>

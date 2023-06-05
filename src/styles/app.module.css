@@ -16,15 +16,8 @@
 
 .lastVodPlayer {
     display: flex;
-    align-items: stretch;
     justify-content: space-between;
     gap: 1rem;
-}
-
-.lastVod {
-    aspect-ratio: 16/9;
-    height: 100%;
-    width: 100%;
 }
 
 .lastVodInfo {
@@ -101,7 +94,7 @@
 
 
 /* RESPONSIVE */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
     .lastVodContainer,
     .allVodsContainer,

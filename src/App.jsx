@@ -64,7 +64,7 @@ function MainPage() {
                     <h1>Último VOD</h1>
                     <div className={styles.lastVodPlayer}>
                         <iframe
-                            className={styles.lastVod}
+                            className="vod"
                             src={lastVod[0].isYoutube === 0 ?
                                 `https://drive.google.com/file/d/${lastVod[0].videoId}/preview`
                                 : "https://www.youtube.com/embed/" + lastVod[0].videoId}
@@ -72,7 +72,7 @@ function MainPage() {
                             allowFullScreen="true"
                             title="Last VOD"
                         />
-                        <div className="vodInfo">
+                        <div className={`${styles.lastVodInfo} vodInfo`}>
                             <h1>{lastVod[0].title}</h1>
                             <p>{lastVod[0].description}</p>
                         </div>

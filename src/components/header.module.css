@@ -91,7 +91,7 @@
 }
 
 .hidden {
-    margin-top: 0rem !important;
+    transform: translateY(-100%);
 }
 
 .hidden .navOptions {

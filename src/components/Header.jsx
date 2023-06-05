@@ -53,14 +53,15 @@ export default function Header() {
                 </svg>
             </header>
 
+            {/** The mobile nav */}
             {navOpen && <div className={styles.overlay} onClick={() => setNavOpen(false)} />}
             <div className={`${styles.nav} ${navOpen ? "" : styles.hidden}`}>
                 <div className={styles.navOptions}>
                     <Link to={`/vod?id=${vodList.length - 1}`} className={styles.option}>
-                        <p>Último directo</p>
+                        <h3>Último directo</h3>
                     </Link>
                     <Link to={"/about"} className={styles.option}>
-                        <p>About</p>
+                        <h3>About</h3>
                     </Link>
                 </div>
             </div>

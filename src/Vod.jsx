@@ -13,7 +13,7 @@ export default function Vod() {
     vodId = searchParams.get('id');
     vodList = Object.values(vods);
     vodToPlay = vodList[vodId];
-    if (!parseInt(vodId)) {
+    if (!parseInt(vodId) && vodId != 0) {
         vodToPlay = vodList.slice(-1)[0];
         vodId = vodList.length - 1;
     }

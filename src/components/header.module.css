@@ -87,7 +87,7 @@
     border-bottom: 1px solid var(--accent-color);
     padding: 1rem;
     overflow: hidden;
-    z-index: 100;
+    z-index: 9999999999;
 }
 
 .hidden {

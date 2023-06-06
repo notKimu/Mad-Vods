@@ -13,19 +13,19 @@
     padding: 1rem;
 }
 
-.question {
-    width: 15%;
-    position: absolute;
-    top: -3%;
-    right: -7%;
-}
-
 .aboutContainer h2 {
     font-size: 3rem;
 }
 
 .aboutContainer span {
     font-size: 1.2rem;
+}
+
+.question {
+    width: 15%;
+    position: absolute;
+    top: -3%;
+    right: -7%;
 }
 
 .github {
@@ -40,6 +40,11 @@
     .aboutContainer {
         width: 100%;
     }
+
+    .aboutContainer h2 {
+        font-size: 2.2rem;
+    }
+
     .question {
         width: 20%;
         top: -1%;

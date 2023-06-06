@@ -141,9 +141,4 @@
     .singleVod {
         width: 45%;
     }
-
-    .buttons button:focus {
-        background-color: var(--accent-color);
-        color: black;
-    }
 }

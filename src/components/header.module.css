@@ -156,9 +156,6 @@
     .filler {
         height: 5.5rem;
     }
-    .option:focus h3 {
-        color: var(--accent-color);
-    }
 }
 
 @media screen and (max-width: 570px) {

@@ -39,7 +39,6 @@
     margin: 0;
 }
 
-.selectVod:active,
 .selectVod:hover {
     border-color: var(--secondary-color);
 }
@@ -82,10 +81,6 @@
 
     .selectVod h2 {
         font-size: larger;
-    }
-
-    .selectVod:focus {
-        border-color: var(--secondary-color);
     }
 
     .filler {

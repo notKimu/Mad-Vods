@@ -91,6 +91,7 @@
     .vodTitleContainer p {
         font-size: 3vw;
     }
+
     .playButton:focus {
         opacity: 1;
         filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.622));

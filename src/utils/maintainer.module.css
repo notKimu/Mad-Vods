@@ -43,6 +43,7 @@
     .textMaintainer p {
         font-size: 1rem;
     }
+
     .aboutMaintainer:focus {
         transform: scale(1.02);
         filter: drop-shadow(0 0 5px #ffffff32);

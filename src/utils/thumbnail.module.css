@@ -87,14 +87,18 @@
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 600px) {
-    .locked {
-        width: 6vw;
-    }
-}
-
 @media screen and (max-width: 800px) {
     .vodTitleContainer p {
         font-size: 3vw;
+    }
+    .playButton:focus {
+        opacity: 1;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.622));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .locked {
+        width: 6vw;
     }
 }

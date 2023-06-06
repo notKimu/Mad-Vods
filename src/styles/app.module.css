@@ -45,7 +45,6 @@
 }
 
 .lastVodInfo {
-    max-height: 15rem;
     width: 50%;
     display: flex;
     flex-direction: column;

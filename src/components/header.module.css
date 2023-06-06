@@ -26,13 +26,13 @@
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
 }
 
-.logo:hover .logoImage {
-    filter: drop-shadow(0 0 5px var(--accent-color));
-}
-
 .logoImage {
     height: 4rem;
     pointer-events: none;
+}
+
+.logo:hover .logoImage {
+    filter: drop-shadow(0 0 5px var(--accent-color));
 }
 
 .logo:hover .logoTitle {
@@ -128,6 +128,7 @@
     border-bottom: 1px solid var(--accent-color);
     padding: 1rem;
     overflow: hidden;
+
     z-index: 999999999;
 }
 
@@ -138,7 +139,7 @@
 .hidden .navOptions {
     filter: blur(10px);
     opacity: 0;
-    transform: translateY(200%);
+    transform: translateY(300%);
 }
 
 .navOptions {

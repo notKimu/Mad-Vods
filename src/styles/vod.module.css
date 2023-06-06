@@ -14,6 +14,24 @@
 
 
 /* EXTRAS */
+.exclamations {
+    min-width: 60px;
+    width: 10%;
+    pointer-events: none;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+}
+
+.crown {
+    min-width: 40px;
+    width: 8%;
+    pointer-events: none;
+    position: absolute;
+    top: -8%;
+    right: -1.5%;
+}
+
 .switchVods {
     margin-top: 3rem;
     width: 100%;
@@ -46,22 +64,6 @@
 .filler {
     min-width: 20%;
     flex-grow: 1;
-}
-
-.exclamations {
-    min-width: 60px;
-    width: 10%;
-    position: absolute;
-    bottom: -8%;
-    left: -3%;
-}
-
-.crown {
-    min-width: 40px;
-    width: 8%;
-    position: absolute;
-    top: -8%;
-    right: -1.5%;
 }
 
 

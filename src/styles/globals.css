@@ -37,7 +37,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .container {
     max-width: 100vw;
     display: flex;
@@ -46,6 +45,7 @@ body {
     padding: 2rem;
     overflow: hidden;
 }
+
 
 /* VOD THINGYS */
 iframe {
@@ -118,6 +118,7 @@ a {
 
 .notFound img {
     height: 100%;
+    pointer-events: none;
 }
 
 .notFoundText {
@@ -136,13 +137,16 @@ a {
     0% {
         opacity: 0;
         transform: translateY(200%);
-    } 100% {
+    }
+
+    100% {
         opacity: 1;
         transform: none;
     }
 }
+
 .animate {
-    animation: popup 1s;
+    animation: popup .5s;
 }
 
 

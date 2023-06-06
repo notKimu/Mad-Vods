@@ -23,6 +23,7 @@
 
 .question {
     width: 15%;
+    pointer-events: none;
     position: absolute;
     top: -3%;
     right: -7%;

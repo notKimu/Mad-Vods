@@ -8,7 +8,7 @@
 }
 
 .locked {
-    width: 7%;
+    width: 10%;
     position: absolute;
     top: 0;
     right: 0;
@@ -84,4 +84,17 @@
 
 .singleVod:hover .locked {
     display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+    .locked {
+        width: 6vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .vodTitleContainer p {
+        font-size: 3vw;
+    }
 }

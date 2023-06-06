@@ -15,6 +15,21 @@
     padding: 1rem;
 }
 
+.tape {
+    min-height: 50px;
+    min-width: 60px;
+    width: 10%;
+    margin-top: 5px;
+    position: absolute;
+    top: -5%;
+    left: -2%;
+    z-index: 0;
+}
+
+.lastVodContainer h1 {
+    z-index: 1;
+}
+
 .graffitiArrows {
     width: 15%;
     position: absolute;
@@ -120,9 +135,5 @@
 
     .singleVod {
         width: 45%;
-    }
-
-    .vodTitleContainer p {
-        font-size: 3vw;
     }
 }

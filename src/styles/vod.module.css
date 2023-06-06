@@ -23,7 +23,8 @@
 }
 
 .selectVod {
-    width: 100%;
+    width: 50%;
+
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -33,6 +34,22 @@
     border: 1px solid rgb(42, 42, 42);
     border-radius: 1rem;
     padding: 1rem;
+}
+
+.exclamations {
+    min-width: 60px;
+    width: 10%;
+    position: absolute;
+    bottom: -8%;
+    left: -3%;
+}
+
+.crown {
+    min-width: 40px;
+    width: 8%;
+    position: absolute;
+    top: -8%;
+    right: -1.5%;
 }
 
 
@@ -49,5 +66,8 @@
 
     .switchVods {
         gap: 1rem;
+    }
+    .crown {
+        top: -3%;
     }
 }

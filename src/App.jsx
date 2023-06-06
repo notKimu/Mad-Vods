@@ -20,6 +20,7 @@ function MainPage() {
     const endIndex = startIndex + maxPageSize;
     const paginatedVodList = vodList.reverse().slice(startIndex, endIndex);
 
+    /* FANCY STUFF */
     // Change some values depending on the width
     function getInitialmaxPageSize() {
         if (window.innerWidth < 700) {
@@ -94,7 +95,8 @@ function MainPage() {
                             vod.isYoutube === 1
                                 ? (genThumbnail = `https://img.youtube.com/vi/${vod.videoId}/mqdefault.jpg`)
                                 : (genThumbnail = vod.thumbnail);
-                            return thumbnail(vod.title, genThumbnail, generateImageId(index), vod.isYoutube, thumbnailWidth, "animate");
+
+                            return thumbnail(vod.title, genThumbnail, generateImageId(index), vod.isYoutube, thumbnailWidth);
                         })}
                     </div>
 

@@ -67,6 +67,9 @@ export default function Vod() {
                                 }
                             </div>
                             : ""}
+
+                         <div className={vodList[+vodId - 1] && vodList[+vodId + 1] ? styles.fillerBoth : styles.fillerOne} />
+
                         {vodList[+vodId - 1] ?
                             <div className={styles.selectVod}>
                                 <h2>VOD anterior</h2>

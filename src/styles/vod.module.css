@@ -27,12 +27,18 @@
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: .2rem;
 
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     border: 1px solid rgb(42, 42, 42);
     border-radius: 1rem;
     padding: 1rem;
+}
+
+.selectVod a {
+    margin: 0;
 }
 
 .selectVod:hover {

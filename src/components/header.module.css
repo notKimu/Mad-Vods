@@ -69,6 +69,19 @@
     transition: .1s;
     transition-timing-function: cubic-bezier(.57,.43,.57,.65);
     z-index: -25%;
+
+    transition: none;
+    animation: moveit .5s steps(1, end) alternate infinite;
+}
+
+@keyframes moveit {
+    0% {
+        transform: scaleY(-1);
+    } 50% {
+        transform: scaleY(1);
+    } 100% {
+        transform: scaleX(-1);
+    }
 }
 
 .option:hover p {

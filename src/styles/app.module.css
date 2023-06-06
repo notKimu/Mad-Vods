@@ -77,8 +77,8 @@
     border-radius: 1rem;
     padding: 1rem;
     margin-top: 3rem;
-  }
-  
+}
+
 
 .allVods {
     display: flex;
@@ -104,10 +104,14 @@
     padding: .5rem;
 
     font-size: x-large;
-} .buttons button:hover {
+}
+
+.buttons button:hover {
     background-color: var(--accent-color);
     color: black;
-} .buttons button:active {
+}
+
+.buttons button:active {
     transform: scale(.9);
 }
 
@@ -136,5 +140,10 @@
 
     .singleVod {
         width: 45%;
+    }
+
+    .buttons button:focus {
+        background-color: var(--accent-color);
+        color: black;
     }
 }

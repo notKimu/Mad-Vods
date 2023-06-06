@@ -52,7 +52,7 @@
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
 }
 
-.option:hover p {
+.option:hover h3 {
     color: var(--accent-color);
 }
 
@@ -125,6 +125,9 @@
     }
     .filler {
         height: 5.5rem;
+    }
+    .option:focus h3 {
+        color: var(--accent-color);
     }
 }
 

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from './header.module.css';
+import styles from "./header.module.css";
+import selector from "../files/img/selector.png";
 // Vod list
 import vods from "../files/vods.json";
 
@@ -32,9 +33,11 @@ export default function Header() {
                 <div className={styles.options}>
                     <Link to={`/vod?id=${vodList.length - 1}`} className={styles.option}>
                         <p>Último directo</p>
+                        <img src={selector} />
                     </Link>
                     <Link to={"/about"} className={styles.option}>
                         <p>About</p>
+                        <img src={selector} />
                     </Link>
                 </div>
 

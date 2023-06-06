@@ -3,9 +3,9 @@ import styles from "./thumbnail.module.css";
 import playButton from "../files/svg/play.svg";
 import copyright from "../files/svg/copyright.svg";
 
-export default function thumbnail(title, thumbnail, id, isYoutube, width) {
+export default function thumbnail(title, thumbnail, id, isYoutube, width, style) {
     return (
-        <Link to={`/vod?id=${id}`} className={styles.singleVod} style={{width: width}}>
+        <Link to={`/vod?id=${id}`} className={`${styles.singleVod} ${style}`} style={{width: width}}>
             {isYoutube !== 1 && <img src={copyright} className={styles.locked} />}
             <img alt={title} className={styles.vod} src={thumbnail} />
             <div className={styles.vodGradient}></div>

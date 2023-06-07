@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
-import thumbnail from "./utils/thumbnail";
+import Thumbnail from "./components/Thumbnail";
 import styles from "./styles/app.module.css";
 import tape from "./files/img/tape.png";
 import graffitiArrows from "./files/img/graffitiArrows.png";
@@ -55,7 +55,7 @@ function MainPage() {
 
     useEffect(() => {
         console.log(window.innerWidth);
-    }, [window.innerWidth])
+    }, [])
 
 
     return (
@@ -64,12 +64,12 @@ function MainPage() {
 
             <div className="container">
                 <div className={styles.lastVodContainer}>
-                    <img className={`${styles.tape} animate`} src={tape} />
-                    <img className={`${styles.graffitiArrows} animate`} src={graffitiArrows} />
+                    <img alt="Solo es cinta" className={`${styles.tape} animate`} src={tape} />
+                    <img alt="Flechas en grafiti" className={`${styles.graffitiArrows} animate`} src={graffitiArrows} />
 
                     <h1>Último VOD</h1>
                     <div className={styles.lastVodPlayer}>
-                        {lastVod[0].isYoutube === 0 ? <a className="driveSender" href={`https://drive.google.com/file/d/${lastVod[0].videoId}/preview`} target="_blank" /> : ""}
+                        {lastVod[0].isYoutube === 0 ? <a className="driveSender" href={`https://drive.google.com/file/d/${lastVod[0].videoId}/preview`} rel="noreferrer" target="_blank" /> : ""}
                         <iframe
                             className="vod"
                             src={lastVod[0].isYoutube === 0 ?
@@ -96,7 +96,7 @@ function MainPage() {
                                 ? (genThumbnail = `https://img.youtube.com/vi/${vod.videoId}/mqdefault.jpg`)
                                 : (genThumbnail = vod.thumbnail);
 
-                            return thumbnail(vod.title, genThumbnail, generateImageId(index), vod.isYoutube, thumbnailWidth);
+                            return Thumbnail(vod.title, genThumbnail, generateImageId(index), vod.isYoutube, thumbnailWidth);
                         })}
                     </div>
 

@@ -40,6 +40,11 @@
     right: -5%;
 }
 
+.lastVodContainer:hover .graffitiArrows {
+    bottom: -6%;
+    right: -4%;
+}
+
 .lastVodPlayer {
     display: flex;
     justify-content: space-between;

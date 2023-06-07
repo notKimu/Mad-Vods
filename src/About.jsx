@@ -14,7 +14,7 @@ export default function About() {
 
         <div className="container">
             <div className={styles.aboutContainer}>
-                <img className={styles.question} src={questionmark} />
+                <img className={`${styles.question} animate`} src={questionmark} />
                 <h2>Sobre Mad Vods</h2>
                 <span>
                     Mad Vods fue creado ya que las discográficas no tienen nada

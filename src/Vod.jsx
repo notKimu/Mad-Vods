@@ -37,8 +37,8 @@ export default function Vod() {
                 :
                 <>
                     <div className={styles.videoContainer}>
-                        <img src={exclamations} className={styles.exclamations} />
-                        <img src={crown} className={styles.crown} />
+                        <img className={`${styles.exclamations} animate`} src={exclamations} />
+                        <img className={`${styles.crown} animate`} src={crown} />
                         {vodToPlay.isYoutube === 0 ? <a className="driveSender" href={`https://drive.google.com/file/d/${vodToPlay.videoId}/preview`} target="_blank" /> : ""}
                         <iframe
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -64,8 +64,8 @@ function MainPage() {
 
             <div className="container">
                 <div className={styles.lastVodContainer}>
-                    <img className={styles.tape} src={tape} />
-                    <img className={styles.graffitiArrows} src={graffitiArrows} />
+                    <img className={`${styles.tape} animate`} src={tape} />
+                    <img className={`${styles.graffitiArrows} animate`} src={graffitiArrows} />
 
                     <h1>Último VOD</h1>
                     <div className={styles.lastVodPlayer}>

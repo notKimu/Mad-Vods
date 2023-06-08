@@ -62,7 +62,7 @@
 }
 
 .filler {
-    min-width: 20%;
+    max-width: 20%;
     flex-grow: 1;
 }
 
